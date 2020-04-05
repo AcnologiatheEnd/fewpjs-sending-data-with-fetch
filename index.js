@@ -1,9 +1,11 @@
+
 function submitData(name, email) {
   let formData = {
     name: name,
     email: email
   };
 
+// this will be used to configure fetch to send post request to specified url
   let configObj = {
     method: 'POST',
     headers: {
@@ -13,6 +15,7 @@ function submitData(name, email) {
     body: JSON.stringify(formData)
   };
 
+// used to append text the DOM as well as failures
   function appendText(text) {
     let textElement = document.createElement('p');
     textElement.innerHTML = text;
